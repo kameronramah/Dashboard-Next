@@ -6,22 +6,18 @@ const SideNav = () => {
     return (
         <>
             <div id="layoutSidenav_nav">
-            <Nav defaultActiveKey="/home" className="flex-column">
-  <Nav.Link href="/home">Active</Nav.Link>
-  <Nav.Link eventKey="link-1">Link</Nav.Link>
-  <Nav.Link eventKey="link-2">Link</Nav.Link>
-  <Nav.Link eventKey="disabled" disabled>
-    Disabled
-  </Nav.Link>
-</Nav>
-                <nav className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+            {/* 
+            <Nav.Link eventKey="link-2">Link</Nav.Link>
+                    <Nav.Link eventKey="disabled" disabled>
+                     */}
+                <Nav defaultActiveKey="/home" className="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div className="sb-sidenav-menu">
                         <div className="nav">
                             <div className="sb-sidenav-menu-heading">Core</div>
-                            <a className="nav-link" href="index.html">
+                            <Nav.Link eventKey="link-2" className="nav-link" href="index.html">
                                 <div className="sb-nav-link-icon"><i className="fas fa-tachometer-alt"></i></div>
                                 Dashboard
-                            </a>
+                            </Nav.Link>
                             <div className="sb-sidenav-menu-heading">Interface</div>
                             <a className="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div className="sb-nav-link-icon"><i className="fas fa-columns"></i></div>
@@ -80,10 +76,10 @@ const SideNav = () => {
                         <div className="small">Logged in as:</div>
                         Start Bootstrap
                     </div>
-                </nav>
+                </Nav>
             </div>
         </>
-  )
+    )
 }
 
 export default SideNav
